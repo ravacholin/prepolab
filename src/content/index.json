@@ -1,0 +1,78 @@
+{
+  "blocks": [
+    {
+      "id": "b1",
+      "label": "Bloque 1 (A2)",
+      "lessons": [
+        { "prep": "por-para", "label": "Por vs Para", "itemIds": ["pp_lab_1","pp_minpair_1","pp_input_1","pp_prod_1"] },
+        { "prep": "a-en-de", "label": "A / En / De", "itemIds": ["aed_lab_1","aed_minpair_1","aed_input_1","aed_prod_1"] }
+      ]
+    }
+  ],
+  "itemsById": {
+    "pp_lab_1": {
+      "id":"pp_lab_1",
+      "type":"lab",
+      "schema":["destino","trayecto"],
+      "prompt":"Mapa simple: ¿Qué querés enfatizar en tu recorrido por CABA?",
+      "preferred":{ "destino":"para", "trayecto":"por" },
+      "explanation":"Si importa el punto final, usá 'para'; si contás el camino, 'por'."
+    },
+    "pp_minpair_1": {
+      "id":"pp_minpair_1",
+      "type":"min_pair",
+      "stimulus":[
+        {"caption":"Caminé ___ el parque (recorrido)"},
+        {"caption":"Caminé ___ la salida (objetivo)"}
+      ],
+      "targets":["por","para"]
+    },
+    "pp_input_1": {
+      "id":"pp_input_1",
+      "type":"input_structured",
+      "prompt":"Elegí: 'Subí el video ___ mis amigos' (destinatario)",
+      "options":["por","para"],
+      "answer":"para",
+      "focus":"destino",
+      "explanation":"Beneficiario/destinatario → 'para'."
+    },
+    "pp_prod_1": {
+      "id":"pp_prod_1",
+      "type":"production",
+      "prompt":"Escribí 2 oraciones: una de 'trayecto' y otra de 'destino' (por/para).",
+      "targets":["por","para"],
+      "focus":["trayecto","destino"]
+    },
+    "aed_lab_1": {
+      "id":"aed_lab_1",
+      "type":"lab",
+      "schema":["direccion","interior","origen"],
+      "prompt":"Elegí foco: llegar / estar dentro / venir de.",
+      "preferred":{"direccion":"a","interior":"en","origen":"de"}
+    },
+    "aed_minpair_1": {
+      "id":"aed_minpair_1",
+      "type":"min_pair",
+      "stimulus":[
+        {"caption":"Voy ___ Rosario (dirección)"},
+        {"caption":"Estoy ___ Rosario (ubicación)"}
+      ],
+      "targets":["a","en"]
+    },
+    "aed_input_1": {
+      "id":"aed_input_1",
+      "type":"input_structured",
+      "prompt":"Seleccioná: 'Vengo ___ Caballito' (origen)",
+      "options":["a","en","de"],
+      "answer":"de",
+      "focus":"origen"
+    },
+    "aed_prod_1": {
+      "id":"aed_prod_1",
+      "type":"production",
+      "prompt":"Una con 'a' (dirección), una con 'en' (interior), una con 'de' (origen).",
+      "targets":["a","en","de"],
+      "focus":["direccion","interior","origen"]
+    }
+  }
+}
